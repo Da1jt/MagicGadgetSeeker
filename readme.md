@@ -6,7 +6,7 @@
 ## 功能
 
 - 显示 ELF 文件中各个段的权限和信息。
-- 反汇编 `.text` 段或指定段，查找Magic Gadget。
+- 反汇编任意段，寻找Magic Gadget。
 
 ## 依赖
 
@@ -68,8 +68,8 @@ python MagicGadget.py <elf_file> [options]
 
 ```
 Segment              Address       Permission         Type
-.text                0x400000      r-x                CODE
-.data                0x600000      rw-                DATA
+text                 0x400000      r-x                SHT_PROGBITS
+data                 0x600000      rw-                SHT_PROGBITS
 ```
 
 - 反汇编输出示例：
