@@ -68,8 +68,8 @@ python MagicGadget.py <elf_file> [options]
 
 ```
 Segment              Address       Permission         Type
-.text                0x400000      r-x                 CODE
-.data                0x600000      rw-                 DATA
+.text                0x400000      r-x                CODE
+.data                0x600000      rw-                DATA
 ```
 
 - 反汇编输出示例：
