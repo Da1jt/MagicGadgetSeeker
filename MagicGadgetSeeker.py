@@ -39,9 +39,9 @@ def check_segment_permissions(elf):
         if sectionName.startswith("."):
             sectionName = sectionName[1:]
         permissions = section["sh_flags"]
-        readable = "r" if permissions & 0x4 else "-"
-        writable = "w" if permissions & 0x2 else "-"
-        executable = "x" if permissions & 0x1 else "-"
+        readable = "r" if permissions & 0x2 else "-"
+        writable = "w" if permissions & 0x1 else "-"
+        executable = "x" if permissions & 0x4 else "-"
 
         permissions_str = f"{readable}{writable}{executable}"
 
